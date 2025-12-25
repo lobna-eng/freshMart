@@ -33,11 +33,7 @@ export default function CartContextProvider({
       const data: cartI = await response.json();
       setCartData(data);
 
-      // حفظ cartOwnerId لو موجود
-      // if (data.data?.cartOwner) {
-      //   setCartOwnerId(data.data.cartOwner);
-      //   localStorage.setItem("cartOwnerId", data.data.cartOwner);
-      // }
+
     } catch (error) {
       console.error("Failed to fetch cart:", error);
     } finally {

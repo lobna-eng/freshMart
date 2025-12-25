@@ -6,7 +6,7 @@ export async function GET() {
   const token = await getUserToken();
 
   const response = await fetch(
-    "https://ecommerce.routemisr.com/api/v1/wishlist",
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/wishlist`,
     {
       headers: {
         token: token!,

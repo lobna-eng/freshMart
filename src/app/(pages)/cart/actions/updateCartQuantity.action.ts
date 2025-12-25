@@ -9,7 +9,7 @@ export async function updateCartProductQuantityAction(productId: string, count: 
 
 const token=await getUserToken()
        const response = await fetch(
-         "https://ecommerce.routemisr.com/api/v1/cart/" + productId,
+         `${process.env.NEXT_PUBLIC_API_URL}/api/v1/cart/` + productId,
          {
            method: "PUT",
            body: JSON.stringify({ count }),

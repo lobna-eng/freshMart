@@ -5,7 +5,7 @@ import { cartI } from "@/interfaces";
 
 export async function clearUserCartAction() {
   const token = await getUserToken();
-  const response = await fetch("https://ecommerce.routemisr.com/api/v1/cart", {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/cart`, {
     method: "DELETE",
     headers: {
       token: token!,

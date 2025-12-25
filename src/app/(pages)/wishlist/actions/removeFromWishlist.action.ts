@@ -5,7 +5,7 @@ import { getUserToken } from "@/Helpers/getUserToken";
 export async function removeFromWishlistAction(productId: string) {
   const token = await getUserToken();
   const response = await fetch(
-    `https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/wishlist/${productId}`,
     {
       method: "DELETE",
       headers: {

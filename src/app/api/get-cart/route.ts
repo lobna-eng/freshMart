@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const token = await getUserToken();
-  const response = await fetch("https://ecommerce.routemisr.com/api/v1/cart", {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/cart`, {
     headers: {
       token: token!,
     },
